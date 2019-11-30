@@ -57,7 +57,6 @@ destroy:
 		-refresh=true \
 		-var-file="$(VARS)"
 
-
 destroy-target:
 	@echo "$(YELLOW)$(BOLD)[INFO] Specifically destroy a piece of Terraform data.$(RESET)"; echo "Example to type for the following question: module.rds.aws_route53_record.rds-master"
 	@read -p "Destroy target: " DATA && \
@@ -67,3 +66,4 @@ destroy-target:
 		-refresh=true \
 		-var-files=$(VARS) \
 		-target=$$DATA
+
